@@ -1,6 +1,6 @@
 from django.urls import path
-from apps.teachers.views import ListAssignmentsView
+from apps.teachers.views import TeacherAssignmentsView
 
 urlpatterns = [
-    path("assignments/", ListAssignmentsView.as_view(), name='teachers-assignments')
+    path("assignments/", TeacherAssignmentsView.as_view(), name='teachers-assignments')
 ]

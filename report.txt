@@ -8,36 +8,36 @@ collected 14 items
 tests/test_students/test_views.py::test_get_assignments_student_1 PASSED [  7%]
 tests/test_students/test_views.py::test_get_assignments_student_2 PASSED [ 14%]
 tests/test_students/test_views.py::test_post_assignment_student_1 PASSED [ 21%]
-tests/test_students/test_views.py::test_submit_assignment_without_teacher_student_1
+tests/test_students/test_views.py::test_submit_assignment_without_teacher_student_1 
 -------------------------------- live log call ---------------------------------
-2022-10-16 15:49:30 [ WARNING] django.request: Bad Request: /student/assignments/ (log.py:224)
+2022-10-16 16:53:38 [ WARNING] django.request: Bad Request: /student/assignments/ (log.py:224)
 PASSED                                                                   [ 28%]
 tests/test_students/test_views.py::test_submit_assignment_student_1 PASSED [ 35%]
 tests/test_teachers/test_views.py::test_get_assignments_teacher_1 PASSED [ 42%]
 tests/test_teachers/test_views.py::test_get_assignments_teacher_2 PASSED [ 50%]
-tests/test_teachers/test_views.py::test_invalid_grade_teacher_1
+tests/test_teachers/test_views.py::test_invalid_grade_teacher_1 
 -------------------------------- live log call ---------------------------------
-2022-10-16 15:49:36 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
+2022-10-16 16:53:47 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
 PASSED                                                                   [ 57%]
 tests/test_teachers/test_views.py::test_grade_draft_state_teacher_1 
 -------------------------------- live log call ---------------------------------
-2022-10-16 15:49:38 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
+2022-10-16 16:53:49 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
 PASSED                                                                   [ 64%]
 tests/test_teachers/test_views.py::test_grade_graded_state_teacher_1 
 -------------------------------- live log call ---------------------------------
-2022-10-16 15:49:39 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
+2022-10-16 16:53:52 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
 PASSED                                                                   [ 71%]
 tests/test_teachers/test_views.py::test_change_of_content_teacher_1 
 -------------------------------- live log call ---------------------------------
-2022-10-16 15:49:41 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
+2022-10-16 16:53:54 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
 PASSED                                                                   [ 78%]
 tests/test_teachers/test_views.py::test_grade_invalid_state_teacher_1 
 -------------------------------- live log call ---------------------------------
-2022-10-16 15:49:42 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
+2022-10-16 16:53:57 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
 PASSED                                                                   [ 85%]
 tests/test_teachers/test_views.py::test_grade_other_teacher_teacher_2 
 -------------------------------- live log call ---------------------------------
-2022-10-16 15:49:43 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
+2022-10-16 16:53:59 [ WARNING] django.request: Bad Request: /teacher/assignments/ (log.py:224)
 PASSED                                                                   [ 92%]
 tests/test_teachers/test_views.py::test_grade_assignment_teacher_2 PASSED [100%]
 
@@ -85,4 +85,4 @@ tests/test_teachers/test_views.py                        71      0   100%
 TOTAL                                                   381     13    97%
 
 
-============================= 14 passed in 20.80s ==============================
+============================= 14 passed in 35.25s ==============================

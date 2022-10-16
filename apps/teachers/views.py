@@ -9,7 +9,8 @@ from apps.students.models import Assignment
 
 from apps.teachers.models import Teacher
 
-class ListAssignmentsView(ListAPIView):
+
+class TeacherAssignmentsView(ListAPIView):
     serializer_class = StudentAssignmentSerializer
 
     # List all assignments submitted to this teacher
