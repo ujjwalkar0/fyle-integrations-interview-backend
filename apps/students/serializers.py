@@ -12,16 +12,22 @@ class StudentAssignmentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def validate(self, attrs):
-        if 'grade' in attrs and attrs['grade']:
+        
+        if "teacher" not in attrs  and 'grade' in attrs and attrs['grade']:
             raise serializers.ValidationError('Student cannot set grade for assignment')
 
         if 'state' in attrs:
             if attrs['state'] == 'GRADED':
                 raise serializers.ValidationError('Student cannot set state to GRADED')
+
             if attrs['state'] == 'SUBMITTED' and not ('teacher' in attrs and attrs['teacher']):
                 raise serializers.ValidationError('Teacher ID has to be sent to set state to SUBMITTED')
 
+        if 'grade' in attrs and 'teacher' in attrs:
+                attrs['state'] = 'GRADED'
+
+
         if self.partial:
             return attrs
-
+        
         return super().validate(attrs)

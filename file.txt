@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.14, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+django: settings: fyle_classroom.settings (from ini)
+rootdir: /home/ujjwal/Desktop/Portfolio/fyle-integrations-interview-backend, configfile: pytest.ini
+plugins: django-4.4.0, cov-2.12.1
+collected 14 items
+
+tests/test_students/test_views.py::test_get_assignments_student_1 PASSED [  7%]
+tests/test_students/test_views.py::test_get_assignments_student_2 PASSED [ 14%]
+tests/test_students/test_views.py::test_post_assignment_student_1 PASSED [ 21%]
+tests/test_students/test_views.py::test_submit_assignment_without_teacher_student_1 
