@@ -54,6 +54,12 @@ def student_2():
         'user_id': 4
     })
 
+@pytest.fixture
+def student_not_exist():
+    return json.dumps({
+        'student_id': 9,
+        'user_id': 8
+    })
 
 @pytest.fixture
 def teacher_1():

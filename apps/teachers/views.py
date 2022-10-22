@@ -4,19 +4,19 @@ from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from apps.students.serializers import StudentAssignmentSerializer
+from apps.teachers.serializers import TeacherAssignmentSerializer
 from apps.students.models import Assignment
 
 from apps.teachers.models import Teacher
 
 
 class TeacherAssignmentsView(ListAPIView):
-    serializer_class = StudentAssignmentSerializer
+    serializer_class = TeacherAssignmentSerializer
 
     # List all assignments submitted to this teacher
     def get(self, request, *args, **kwargs):
         assignments = Assignment.objects.filter(teacher__user=request.user)
-
+        
         return Response(
             data=self.serializer_class(assignments, many=True).data,
             status=status.HTTP_200_OK
@@ -40,9 +40,6 @@ class TeacherAssignmentsView(ListAPIView):
         
         try:
             assignment = Assignment.objects.get(teacher__user=request.user, id=assignment_id)
-            request.data["teacher"] = Teacher.objects.get(user=request.user).id
-
-            print(assignment)
 
             if assignment.grade != None: 
                 return Response(
@@ -65,16 +62,12 @@ class TeacherAssignmentsView(ListAPIView):
         
         serializer = self.serializer_class(assignment, data=request.data, partial=True)
         
-        print(request.data)
-
         if serializer.is_valid():
             serializer.save()
             return Response(
                 data=serializer.data,
                 status=status.HTTP_200_OK
             )
-
-        print(serializer.is_valid())
 
         return Response(
             data=serializer.errors,

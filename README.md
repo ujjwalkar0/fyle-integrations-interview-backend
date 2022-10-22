@@ -64,3 +64,29 @@ bash run.sh
 ```
 pytest tests/ --cov
 ```
+
+## My Work
+1. Write all missing APIs.
+2. Add additional tests
+    
+    A. Test for the student, not registered with the database
+    
+    B. Test when no headers are provided
+
+    C. Check if homepage loaded successfully
+
+    D. Test for a assignment that is not exist
+
+    E. Student try to submit assignment without teacher id
+
+    F. Student try to set grade of assignment
+
+    G. Test student try to set his assignment graded
+
+## Test Report: [Details](./report.txt)
+
+<center>
+
+![image](https://user-images.githubusercontent.com/55041104/197340635-c816f3f6-8da7-4e82-bc8d-b1e8edf3de05.png)
+
+</center>

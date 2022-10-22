@@ -34,3 +34,5 @@ class Principal(BaseAuthentication):
             raise AuthenticationFailed('No X-Principal header found')
 
         return json.loads(principal_header)
+
+# Test Headers
